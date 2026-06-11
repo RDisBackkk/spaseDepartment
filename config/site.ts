@@ -1,36 +1,46 @@
 export const siteConfig = {
   navbar: {
-    brandTop: "awwwards.conf",
-    brandBottom: "New York",
+    brandTop: "UJJWAL.CONF",
+    brandBottom: "2026",
     eventMeta: {
-      line1: "December 5-6",
-      line2: "L'Alliance New York / FIAF",
+      line1: "Software Engineering",
+      line2: "Systems • Backend • AI",
     },
     links: [
       { label: "Speakers", href: "/speakers" },
-      { label: "SCHEDULE", href: "/schedule" },
-      { label: "Activities", href: "/activities" },
+      { label: "Schedule", href: "/schedule" },
+      { label: "Sessions", href: "/sessions" },
     ],
     cta: {
-      label: "SOLD OUT",
-      href: "/tickets",
+      label: "Register",
+      href: "/register",
     },
   },
+
   home: {
     hero: {
-      titleLine1: "AI, Next-Gen UX &",
-      titleLine2: "Digital Frontiers",
-      titleHighlight: "UI Design",
+      titleLine1: "Backend Systems",
+      titleLine2: "& Distributed",
+      titleHighlight: "Engineering",
+
       footerPrefix: "W.",
-      footerText: "Digital Thinkers",
-      cta: "SOLD OUT!",
-      descriptionInfo: "Talks, networking, activities, and parties. Learn from global influential leaders, connect with like-minded peers, and shape the future of the digital industry.",
+      footerText: "Developer Summit",
+
+      cta: "REGISTER NOW",
+
+      descriptionInfo:
+        "Talks, workshops, networking, and deep dives into modern software engineering.",
     },
+
     description: {
-      p1Start: "An intimate get-together ",
-      p1Highlight: "tailored for Design Leaders, UX/UI Designers, and Digital Creatives",
-      p1End: " in \"The Big Apple\" to discuss the current state of digital design and the future of our creative community.",
-      p2: "Let's delve into insightful conversations exploring AI's integration with design methodologies, essential UX/UI tools, case studies and emerging technologies. Together, we'll navigate the complexities and potentials of AI, shaping the future of design with honesty, integrity, and a shared passion for innovation.",
-    }
-  }
+      p1Start: "An exclusive gathering for ",
+      p1Highlight:
+        "software engineers, backend developers, system architects, and technology enthusiasts",
+      p1End:
+        " exploring the future of scalable software and modern engineering.",
+
+      p2:
+        "Join discussions on distributed systems, cloud infrastructure, AI-assisted development, databases, performance optimization, and production-grade architecture. Learn from experienced engineers, exchange ideas, and discover the technologies shaping the next generation of software.",
+    },
+  },
 };
