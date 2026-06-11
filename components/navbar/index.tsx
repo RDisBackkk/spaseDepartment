@@ -6,7 +6,7 @@ import NavCTA from "./NavCTA";
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-0 w-full z-[1000] font-sans border border-amber-500 bg-[#E3E8EC]">
+    <header className="fixed top-0 left-0 w-full z-[1000] font-sans  bg-[#dee1e4]">
       <nav className="grid grid-cols-12 lg:items-start relative w-full pt-10 pb-6 px-10">
         <NavBrand />
         <NavMeta />

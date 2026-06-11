@@ -5,11 +5,12 @@ export default function HeroSection() {
   const { hero } = siteConfig.home;
 
   return (
-    <section className="relative w-full px-6 lg:px-10 pt-8 pb-20">
-      <div className="max-w-[1800px] mx-auto flex flex-col justify-between min-h-[80vh]">
+    <section className="relative w-full px-6 lg:px-10 pt-8 pb-20 border-4 border-black">
+      <div className="max-w-[1800px] mx-auto flex flex-col min-h-[80vh] border-4 border-purple-500">
+        
         {/* HERO */}
-        <div className="grid grid-cols-12 gap-x-4 mt-6">
-          <div className="col-span-12">
+        <div className="flex flex-1 mt-6 border-4 border-orange-500">
+          <div className="w-full p-4 border-4 border-cyan-500">
             <h1
               className="
                 font-medium
@@ -17,23 +18,21 @@ export default function HeroSection() {
                 tracking-[-0.05em]
                 text-[#2E3129]
                 text-[clamp(3rem,9vw,9rem)]
+                border-4 border-green-500
+                p-4
               "
             >
-              <span className="block">{hero.titleLine1}</span>
+              <span className="block border-2 border-red-500">
+                {hero.titleLine1}
+              </span>
 
-              <span className="flex items-center gap-4 lg:gap-8 mt-2 lg:mt-4">
-                <span className="whitespace-nowrap">
+              <span className="flex items-center gap-4 lg:gap-8 mt-2 lg:mt-4 border-2 border-blue-500">
+                <span className="whitespace-nowrap border-2 border-pink-500">
                   {hero.titleLine2}
-                </span>
-
-                <span className="hidden sm:flex relative overflow-hidden rounded-full w-[8rem] h-[4rem] lg:w-[12rem] lg:h-[6rem] bg-gradient-to-r from-[#D0D5FF] to-[#E2E5FF]">
-                  <div className="absolute inset-0 border border-white/40 rounded-full" />
-
-                  <div className="absolute top-1/2 left-1/2 w-16 h-16 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#A4B1FF] opacity-50 blur-xl" />
                 </span>
               </span>
 
-              <span className="block text-[#1A4DFF] mt-2 lg:mt-4">
+              <span className="block text-[#1A4DFF] mt-2 lg:mt-4 border-2 border-yellow-500">
                 {hero.titleHighlight}
               </span>
             </h1>
@@ -41,66 +40,69 @@ export default function HeroSection() {
         </div>
 
         {/* FOOTER */}
-        <div className="grid grid-cols-12 gap-x-4 mt-16 lg:mt-24 items-end">
+        <div className="grid grid-cols-12 items-end gap-y-8 gap-x-6 mt-auto pt-12 border-4 border-red-600">
+          
           {/* LEFT */}
-          <div className="col-span-12 md:col-span-3 flex items-center mb-6 md:mb-0">
-            <span className="font-bold text-[18px]">
+          <div className="col-span-12 lg:col-span-2 flex items-center border-4 border-green-600 p-4">
+            <div className="font-bold text-[22px] mr-2 border-2 border-black p-2">
               {hero.footerPrefix}
-            </span>
+            </div>
 
-            <span className="ml-2 text-[18px] text-[#111111]">
+            <div className="text-[18px] text-[#111111] border-2 border-black p-2">
               {hero.footerText}
-            </span>
+            </div>
           </div>
 
           {/* CENTER CTA */}
-          <div className="col-span-12 md:col-span-5 lg:col-start-3 lg:col-span-4 mb-6 md:mb-0">
-            <button className="w-full bg-[#1A4DFF] hover:bg-[#0036FF] transition-colors text-white py-6 px-10 rounded-sm font-bold tracking-widest text-[14px] flex items-center justify-center gap-2">
+          <div className="col-span-12 lg:col-start-3 lg:col-span-4 border-4 border-blue-600 p-4">
+            <button className="w-full bg-[#1A4DFF] hover:bg-[#0036FF] transition-colors text-white py-6 px-10 rounded-sm font-bold uppercase tracking-wide text-[14px] flex items-center justify-center gap-3 border-4 border-white">
               {hero.cta}
 
-              <span className="inline-block">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="10"
-                  height="12"
-                  fill="none"
-                  viewBox="0 0 8 11"
-                >
-                  <circle
-                    cx="2.429"
-                    cy="2.358"
-                    r="1.111"
-                    className="fill-current"
-                    transform="rotate(45 2.429 2.358)"
-                  />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="12"
+                fill="none"
+                viewBox="0 0 8 11"
+                className="border border-white"
+              >
+                <circle
+                  cx="2.429"
+                  cy="2.358"
+                  r="1.111"
+                  className="fill-current"
+                  transform="rotate(45 2.429 2.358)"
+                />
 
-                  <circle
-                    cx="5.571"
-                    cy="5.5"
-                    r="1.111"
-                    className="fill-current"
-                    transform="rotate(135 5.571 5.5)"
-                  />
+                <circle
+                  cx="5.571"
+                  cy="5.5"
+                  r="1.111"
+                  className="fill-current"
+                  transform="rotate(135 5.571 5.5)"
+                />
 
-                  <circle
-                    cx="2.429"
-                    cy="8.642"
-                    r="1.111"
-                    className="fill-current"
-                    transform="rotate(135 2.429 8.642)"
-                  />
-                </svg>
-              </span>
+                <circle
+                  cx="2.429"
+                  cy="8.642"
+                  r="1.111"
+                  className="fill-current"
+                  transform="rotate(135 2.429 8.642)"
+                />
+              </svg>
             </button>
           </div>
 
-          {/* RIGHT */}
-          <div className="col-span-12 md:col-span-4 lg:col-start-11 lg:col-span-2">
-            <span className="text-[#1A4DFF] text-[32px] leading-none mb-4 block">
-              *
-            </span>
+          {/* EMPTY COLUMNS (5-10) */}
+          
 
-            <p className="text-[13px] leading-[1.5] text-[#111111]">
+          {/* RIGHT */}
+          <div className="col-span-12 lg:col-start-11 lg:col-span-2 border-4 border-yellow-500 p-4">
+            <div className="text-[#1A4DFF] text-[28px] leading-none mb-4 border-2 border-black inline-block p-2">
+              ✳
+            </div>
+
+            <p className="text-[14px] leading-[1.8] text-[#111111] border-2 border-black p-2">
               {hero.descriptionInfo}
             </p>
           </div>
