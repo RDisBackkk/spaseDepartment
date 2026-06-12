@@ -50,10 +50,8 @@ export default function Navbar() {
         willChange: "opacity, transform"
       }}
     >
-      {/* Stronger whitish blur for premium legibility */}
-      <div className="absolute inset-0 w-full h-full bg-white/70 backdrop-blur-xl pointer-events-none" 
-           style={{ maskImage: "linear-gradient(to bottom, black, transparent)" }} 
-      />
+      {/* Safari performance fix: Use a gradient overlay instead of heavy backdrop-blur and mask-image */}
+      <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-white/90 via-white/50 to-transparent pointer-events-none" />
       
       <nav className="relative grid grid-cols-12 lg:items-start w-[92vw] pt-10 pb-6 px-10">
         <NavBrand />
