@@ -54,7 +54,7 @@ export default function GlobeSection() {
 
           {/* Location Badge */}
           <div className="flex items-center justify-center w-full -mt-2 relative z-10">
-            <div className="inline-flex items-center gap-3 px-6 py-4 rounded-full border border-[#D8D8D8] bg-white/80 backdrop-blur-md shadow-sm">
+            <div className="inline-flex items-center gap-3 px-6 py-4 rounded-md border border-[#D8D8D8] bg-white/80 backdrop-blur-md shadow-sm">
               
               <MapPin className="w-5 h-5 text-[#1A4DFF] shrink-0" />
 
@@ -63,7 +63,7 @@ export default function GlobeSection() {
                 className="
                   min-w-[220px]
                   h-7
-                  text-[15px]
+                  text-[25px]
                   font-semibold
                   tracking-[0.08em]
                   text-[#222]
