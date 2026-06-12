@@ -44,7 +44,7 @@ export const TextRevealBlock: FC<TextRevealBlockProps> = ({
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 0.9", "start 0.15"],
+    offset: ["start 0.9", "end 0.5"],
   })
 
   return (
