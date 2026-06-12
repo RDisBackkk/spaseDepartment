@@ -1,6 +1,6 @@
 export const siteConfig = {
   navbar: {
-    brandTop: "UJJWAL.CONF",
+    brandTop: "UJJWAL.PRAKASH",
     brandBottom: "2026",
     eventMeta: {
       line1: "Software Engineering",
