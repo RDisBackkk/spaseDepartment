@@ -12,7 +12,7 @@ export default function GlobeSection() {
       <div className="w-[82vw] mx-auto grid grid-cols-12 gap-y-16 gap-x-6 items-center">
         
         {/* Left Section */}
-        <div className="col-span-12 lg:col-span-4 flex flex-col justify-center order-2 lg:order-1">
+        <div className="col-span-12 lg:col-span-6 xl:col-span-5 flex flex-col justify-center order-2 lg:order-1 relative z-20">
           
           <div className="flex items-center gap-2 mb-6">
             <div className="text-[#1A4DFF] text-[14px] leading-none">
@@ -24,7 +24,7 @@ export default function GlobeSection() {
             </HyperText>
           </div>
 
-          <h2 className="font-normal text-[#1A4DFF] text-[clamp(5rem,12vw,10rem)] leading-[0.9] tracking-[-0.06em] mb-8">
+          <h2 className="font-normal text-[#1A4DFF] text-[clamp(4rem,7vw,10rem)] leading-[0.9] tracking-[-0.06em] mb-8">
             <Highlighter
               action="underline"
               color="#FF9800"
@@ -37,7 +37,7 @@ export default function GlobeSection() {
             Gathering
           </h2>
 
-          <p className="text-[14px] leading-[1.7] text-[#111111]">
+          <p className="text-[14px] leading-[1.7] text-[#111111] max-w-md">
             Join thousands of innovators from across the globe. We are
             converging at a premier technical institution to shape the future
             of software and systems architecture.
@@ -45,7 +45,7 @@ export default function GlobeSection() {
         </div>
 
         {/* Right Section */}
-        <div className="col-span-12 lg:col-span-7 lg:col-start-6 flex flex-col items-center order-1 lg:order-2">
+        <div className="col-span-12 lg:col-span-6 xl:col-span-7 flex flex-col items-center order-1 lg:order-2 relative z-10">
 
           {/* Globe */}
           <div className="relative w-full max-w-[600px] aspect-square mx-auto">
