@@ -19,11 +19,11 @@ export const siteConfig = {
 
   home: {
     hero: {
-      titleLine1: "Backend Systems",
+      titleLine1: "Developer Meet",
       titleLine2: "& Distributed",
       titleHighlight: "Engineering",
 
-      footerPrefix: "W.",
+      footerPrefix: "BSBE.",
       footerText: "Developer Summit",
 
       cta: "REGISTER NOW",

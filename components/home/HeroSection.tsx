@@ -6,14 +6,14 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full px-6 lg:px-10 pt-8 pb-20 border-4 border-black">
-      <div className="max-w-[1800px] mx-auto flex flex-col min-h-[80vh] border-4 border-purple-500">
+      <div className="max-w-[100vw] mx-auto flex flex-col min-h-[80vh]  border-4 border-purple-500">
         
         {/* HERO */}
         <div className="flex flex-1 mt-6 border-4 border-orange-500">
           <div className="w-full p-4 border-4 border-cyan-500">
             <h1
               className="
-                font-medium
+                font-normal
                 leading-[0.82]
                 tracking-[-0.05em]
                 text-[#2E3129]
