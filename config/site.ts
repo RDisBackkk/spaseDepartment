@@ -3,8 +3,8 @@ export const siteConfig = {
     brandTop: "UJJWAL.PRAKASH",
     brandBottom: "2026",
     eventMeta: {
-      line1: "Software Engineering",
-      line2: "Systems • Backend • AI",
+      line1: "Software Engineer",
+      line2: "IIT • KANPUR • INDIA",
     },
     links: [  
       { label: "Speakers", href: "/speakers" },

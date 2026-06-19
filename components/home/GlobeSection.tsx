@@ -45,7 +45,7 @@ export default function GlobeSection() {
         </div>
 
         {/* Right Section */}
-        <div className="col-span-12 lg:col-span-6 xl:col-span-7 flex flex-col items-center order-1 lg:order-2 relative z-10">
+        <div className="col-span-12 lg:col-span-6 xl:col-span-7 flex flex-col items-center order-1 lg:order-2 relative z-10 lg:translate-x-10 xl:translate-x-20">
 
           {/* Globe */}
           <div className="relative w-full max-w-[600px] aspect-square mx-auto">
@@ -53,8 +53,8 @@ export default function GlobeSection() {
           </div>
 
           {/* Location Badge */}
-          <div className="flex items-center justify-center w-full -mt-2 relative z-10">
-            <div className="inline-flex items-center gap-3 px-6 py-4 rounded-md border border-[#D8D8D8] bg-white/95 shadow-sm">
+          <div className="flex items-center justify-center w-full mt-4 relative z-10">
+            <div className="inline-flex items-center gap-3 px-8 py-3.5 rounded-full border border-white/60 bg-white/40 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.04)] hover:bg-white/60 transition-colors duration-300">
               
               <MapPin className="w-5 h-5 text-[#1A4DFF] shrink-0" />
 
