@@ -19,8 +19,8 @@ export default function DotField() {
     const dpr = window.devicePixelRatio || 1;
     
     // Grid spacing (adjust to change density)
-    const spacing = 70; 
-    const dotRadius = 1.5; 
+    const spacing = 80; 
+    const dotRadius = 1.3; 
     
     // Physics properties
     const repelRadius = 120;
