@@ -6,6 +6,7 @@ import NavBrand from "./NavBrand";
 import NavMeta from "./NavMeta";
 import NavLinks from "./NavLinks";
 import NavCTA from "./NavCTA";
+import NavMobile from "./NavMobile";
 
 export default function Navbar() {
   const { scrollY } = useScroll();
@@ -53,13 +54,14 @@ export default function Navbar() {
       {/* Safari performance fix: Use a gradient overlay instead of heavy backdrop-blur and mask-image */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-white/90 via-white/50 to-transparent pointer-events-none" />
       
-      <nav className="relative grid grid-cols-12 lg:items-start w-[92vw] pt-10 pb-6 px-10">
+      <nav className="relative grid grid-cols-12 lg:items-start w-[92vw] pt-10 pb-6 px-4 lg:px-10">
         <NavBrand />
         <NavMeta />
-        <div className="col-start-7 col-span-6 flex items-center justify-between">
+        <div className="hidden lg:flex col-start-7 col-span-6 items-center justify-between">
           <NavLinks />
           <NavCTA />
         </div>
+        <NavMobile />
       </nav>
     </motion.header>
   );

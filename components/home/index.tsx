@@ -8,7 +8,7 @@ export default function HomeComponents() {
     <>
       <HeroSection />
       <DescriptionSection />
-      <GlobeSection />
+      {/* <GlobeSection /> */}
     </>
   );
 }
