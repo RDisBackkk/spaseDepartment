@@ -20,7 +20,7 @@ export default function GlobeSection() {
             </div>
 
             <HyperText className="font-bold text-[20px] text-[#111111] uppercase tracking-wide">
-              Venue Location
+              Current Base
             </HyperText>
           </div>
 
@@ -29,18 +29,16 @@ export default function GlobeSection() {
               action="underline"
               color="#FF9800"
             >
-              Global
+              Engineering
             </Highlighter>
 
             <br />
 
-            Gathering
+            From India
           </h2>
 
           <p className="text-[14px] leading-[1.7] text-[#111111] max-w-md">
-            Join thousands of innovators from across the globe. We are
-            converging at a premier technical institution to shape the future
-            of software and systems architecture.
+            Currently architecting scalable backend systems and intelligent infrastructure at IIT Kanpur, contributing to global tech innovation through open-source and research.
           </p>
         </div>
 
@@ -69,11 +67,11 @@ export default function GlobeSection() {
                   text-[#222]
                 "
                 texts={[
-                  "Hall 5",
                   "IIT Kanpur",
                   "Kanpur, UP",
                   "208016",
                   "India",
+                  "Remote",
                 ]}
               />
 

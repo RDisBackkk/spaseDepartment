@@ -11,21 +11,21 @@ export default function DescriptionSection() {
       <div className="grid grid-cols-12 border-black gap-x-4">
         <div className="col-span-12 lg:col-start-3 lg:col-span-8 text-[32px] md:text-[48px] lg:text-[60px] font-light leading-[1.1] tracking-[-0.03em]">
 
-          <TextRevealBlock wordCount={31}>
+          <TextRevealBlock wordCount={47}>
             <TextRevealWords startIndex={0}>
-              Join discussions on distributed systems, cloud infrastructure, AI-assisted development, databases, performance optimization, and
+              Promoted to Senior Software Engineer & Team Lead for the official IIT Kanpur placement portal (RAS), managing a team of 4 developers and a
             </TextRevealWords>{" "}
             <TextRevealHighlighted
-              startIndex={13}
+              startIndex={24}
               action="highlight"
               color="#87CEFA"
               animationDuration={800}
               className="inline"
             >
-              production-grade architecture.
+              37K+ line production codebase
             </TextRevealHighlighted>{" "}
-            <TextRevealWords startIndex={15}>
-              Learn from experienced engineers, exchange ideas, and discover the technologies shaping the next generation of software.
+            <TextRevealWords startIndex={28}>
+              for 20,000+ students. Co-authored peer-reviewed deep learning research for ISRO, accepted for an oral presentation at IEEE IGARSS 2026.
             </TextRevealWords>
           </TextRevealBlock>
 
@@ -34,10 +34,3 @@ export default function DescriptionSection() {
     </section>
   );
 }
-
-
- // Word indices (0-based):
-  // 0-12:  "Join discussions on distributed systems, cloud infrastructure, AI-assisted development, databases, performance optimization, and"
-  // 13-14: "production-grade architecture." (highlighted)
-  // 15-30: "Learn from experienced engineers, exchange ideas, and discover the technologies shaping the next generation of software."
-  // Total: 31 words

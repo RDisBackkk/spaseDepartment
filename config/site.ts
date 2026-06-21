@@ -7,59 +7,55 @@ export const siteConfig = {
       line2: "IIT • KANPUR • INDIA",
     },
     links: [  
-      { label: "Speakers", href: "/speakers" },
-      { label: "Schedule", href: "/schedule" },
-      { label: "Sessions", href: "/sessions" },
+      { label: "Experience", href: "#experience" },
+      { label: "Projects", href: "#projects" },
+      { label: "Research", href: "#research" },
     ],
     cta: {
-      label: "Register",
-      href: "/register",
+      label: "Resume",
+      href: "https://ujjwalprakash.netlify.app/",
     },
   },
 
   home: {
     hero: {
-      titleLine1: "Developer Meeting",
-      titleLine2: "& Distributed",
-      titleHighlight: "Engineering",
+      titleLine1: "Full-Stack Engineer",
+      titleLine2: "& Research Author",
+      titleHighlight: "Co-author",
 
-      footerPrefix: "BSBE.",
-      footerText: "Developer Summit",
+      footerPrefix: "IITK.",
+      footerText: "Core Engineer",
 
-      cta: "REGISTER NOW",
+      cta: "VIEW PROJECTS",
 
       descriptionInfo:
-        "Talks, workshops, networking, and deep dives into modern software engineering.",
+        "High-performing Full-Stack Engineer and Research Co-author architecting scalable, high-concurrency systems.",
     },
 
     description: {
-      p1Start: "An exclusive gathering for ",
+      p1Start: "A proven track record of architecting ",
       p1Highlight:
-        "software engineers, backend developers, system architects, and technology enthusiasts",
+        "scalable, high-concurrency systems and delivering high-availability cloud applications",
       p1End:
-        " exploring the future of scalable software and modern engineering.",
+        " with 99.9% uptime.",
 
       p2:
-        "Join discussions on distributed systems, cloud infrastructure, AI-assisted development, databases, performance optimization, and production-grade architecture. Learn from experienced engineers, exchange ideas, and discover the technologies shaping the next generation of software.",
+        "Promoted to Senior Software Engineer & Team Lead for the official IIT Kanpur placement portal (RAS), managing a team of 4 developers and a 37K+ line production codebase for 20,000+ students. Co-authored peer-reviewed deep learning research for ISRO, accepted for an oral presentation at IEEE IGARSS 2026.",
     },
   },
   
   footer: {
     brand: "UJJWAL.PRAKASH",
-    location: "Global Summit",
+    location: "Kanpur, India",
     copyright: "© 2026 Ujjwal Prakash. All rights reserved.",
     creator: "Made with love by ujjwal.prakash",
     links: [
-      { label: "Code of conduct", href: "/code-of-conduct" },
-      { label: "Sponsorship plans", href: "/sponsors" },
-      { label: "FAQs", href: "/faqs" },
+      { label: "Portfolio", href: "https://ujjwalprakash.netlify.app/" },
+      { label: "Email", href: "mailto:ujjwal24@iitk.ac.in" },
     ],
     socials: [
-      { label: "Twitter", href: "https://twitter.com" },
-      { label: "Instagram", href: "https://instagram.com" },
-      { label: "Linkedin", href: "https://linkedin.com" },
-      { label: "Youtube", href: "https://youtube.com" },
-      { label: "Facebook", href: "https://facebook.com" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/ujjwal-prakash-036873336/" },
+      { label: "GitHub", href: "https://github.com/ujjwalPrakash-spike" },
     ],
   },
 };

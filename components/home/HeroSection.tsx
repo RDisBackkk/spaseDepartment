@@ -43,11 +43,11 @@ export default function HeroSection() {
               <span className="block text-[#1A4DFF] -mt-[0.05em]">
                 <RotatingText
                   texts={[
+                    "Architecture",
                     "Engineering",
-                    "Design",
-                    "Deployment",
-                    "Systems",
-                    "Infrastructure",
+                    "Cloud Systems",
+                    "Deep Learning",
+                    "Go & Next.js",
                   ]}
                   mainClassName="
                     overflow-hidden
@@ -100,17 +100,7 @@ export default function HeroSection() {
               </span>
             </button>
           </div>
-          
-          {/* <div className="col-span-12 border border-amber-400 md:col-start-3 md:col-span-3">
-            <button className="relative group overflow-hidden w-full bg-transparent py-3.5 px-6 rounded-sm font-bold uppercase tracking-wide text-[15px] border-2 border-[#555555] text-[#2f2f2f]">
-              <span className="absolute top-0 left-0 w-full h-full bg-[#313131] -translate-x-[101%] group-hover:translate-x-0 transition-transform duration-300 ease-out z-0"></span>
-
-              <span className="relative z-10 flex items-center justify-center gap-3 w-full h-full group-hover:text-white transition-colors duration-300">
-                {hero.cta}
-              </span>
-            </button>
-          </div> */}
-
+    
           {/* RIGHT */}
           <div className="col-span-12 md:col-start-10 md:col-span-3">
             <div className="text-[#1A4DFF] text-[12px] leading-none mb-3">
