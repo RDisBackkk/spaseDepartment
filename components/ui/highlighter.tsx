@@ -25,6 +25,7 @@ interface HighlighterProps {
   padding?: number
   multiline?: boolean
   isView?: boolean
+  className?: string
 }
 
 export function Highlighter({
@@ -37,54 +38,53 @@ export function Highlighter({
   padding = 2,
   multiline = true,
   isView = false,
+  className,
 }: HighlighterProps) {
   const elementRef = useRef<HTMLSpanElement>(null)
+  const annotationRef = useRef<RoughAnnotation | null>(null)
 
   const isInView = useInView(elementRef, {
-    once: true,
     margin: "-10%",
   })
 
   // If isView is false, always show. If isView is true, wait for inView
   const shouldShow = !isView || isInView
+  const shouldShowRef = useRef(shouldShow)
+  shouldShowRef.current = shouldShow
 
   useLayoutEffect(() => {
     const element = elementRef.current
-    let annotation: RoughAnnotation | null = null
-    let resizeObserver: ResizeObserver | null = null
+    if (!element) return
 
-    if (shouldShow && element) {
-      const annotationConfig = {
-        type: action,
-        color,
-        strokeWidth,
-        animationDuration,
-        iterations,
-        padding,
-        multiline,
-      }
-
-      const currentAnnotation = annotate(element, annotationConfig)
-      annotation = currentAnnotation
-      currentAnnotation.show()
-
-      resizeObserver = new ResizeObserver(() => {
-        currentAnnotation.hide()
-        currentAnnotation.show()
-      })
-
-      resizeObserver.observe(element)
-      resizeObserver.observe(document.body)
+    const annotationConfig = {
+      type: action,
+      color,
+      strokeWidth,
+      animationDuration,
+      iterations,
+      padding,
+      multiline,
     }
+
+    const currentAnnotation = annotate(element, annotationConfig)
+    annotationRef.current = currentAnnotation
+
+    const resizeObserver = new ResizeObserver(() => {
+      if (annotationRef.current && shouldShowRef.current) {
+        annotationRef.current.hide()
+        annotationRef.current.show()
+      }
+    })
+
+    resizeObserver.observe(element)
+    resizeObserver.observe(document.body)
 
     return () => {
-      annotation?.remove()
-      if (resizeObserver) {
-        resizeObserver.disconnect()
-      }
+      currentAnnotation.remove()
+      resizeObserver.disconnect()
+      annotationRef.current = null
     }
   }, [
-    shouldShow,
     action,
     color,
     strokeWidth,
@@ -94,8 +94,18 @@ export function Highlighter({
     multiline,
   ])
 
+  useLayoutEffect(() => {
+    if (annotationRef.current) {
+      if (shouldShow) {
+        annotationRef.current.show()
+      } else {
+        annotationRef.current.hide()
+      }
+    }
+  }, [shouldShow])
+
   return (
-    <span ref={elementRef} className="relative inline-block bg-transparent">
+    <span ref={elementRef} className={`relative inline bg-transparent ${className || ""}`}>
       {children}
     </span>
   )
