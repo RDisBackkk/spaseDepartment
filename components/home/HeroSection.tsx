@@ -38,7 +38,7 @@ export default function HeroSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % notifications.length);
-    }, 4000);
+    }, 2500);
     return () => clearInterval(timer);
   }, []);
 
