@@ -6,7 +6,7 @@ export const siteConfig = {
       line1: "Software Engineer",
       line2: "IIT • KANPUR • INDIA",
     },
-    links: [  
+    links: [
       { label: "Experience", href: "#experience" },
       { label: "Projects", href: "#projects" },
       { label: "Research", href: "#research" },
@@ -36,14 +36,22 @@ export const siteConfig = {
       p1Start: "A proven track record of architecting ",
       p1Highlight:
         "scalable, high-concurrency systems and delivering high-availability cloud applications",
-      p1End:
-        " with 99.9% uptime.",
+      p1End: " with 99.9% uptime.",
 
-      p2:
-        "Promoted to Senior Software Engineer & Team Lead for the official IIT Kanpur placement portal (RAS), managing a team of 4 developers and a 37K+ line production codebase for 20,000+ students. Co-authored peer-reviewed deep learning research for ISRO, accepted for an oral presentation at IEEE IGARSS 2026.",
+      p2: "Promoted to Senior Software Engineer & Team Lead for the official IIT Kanpur placement portal (RAS), managing a team of 4 developers and a 37K+ line production codebase for 20,000+ students. Co-authored peer-reviewed deep learning research for ISRO, accepted for an oral presentation at IEEE IGARSS 2026.",
+    },
+    report: {
+      titleLine1: "Client Projects",
+      titleLine2: "Services Guide",
+      description:
+        "A detailed guide covering my freelance services, technical stack, architecture workflow, and how I help clients build high-concurrency systems.",
+      ctaLabel: "Read the Guide",
+      ctaHref: "#",
+      ctaSublabel: ".PDF",
+      imagePath: "/images/coffee.jpg",
     },
   },
-  
+
   footer: {
     brand: "UJJWAL.PRAKASH",
     location: "Kanpur, India",
@@ -54,7 +62,10 @@ export const siteConfig = {
       { label: "Email", href: "mailto:ujjwal24@iitk.ac.in" },
     ],
     socials: [
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/ujjwal-prakash-036873336/" },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/ujjwal-prakash-036873336/",
+      },
       { label: "GitHub", href: "https://github.com/ujjwalPrakash-spike" },
     ],
   },
