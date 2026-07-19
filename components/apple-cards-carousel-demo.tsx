@@ -54,7 +54,7 @@ export default function AppleCardsCarouselDemo() {
           duration: 0.3,
           ease: "power1.out",
         },
-        "-=0.2"
+        "-=0.2",
       )
       .to(
         title2,
@@ -64,7 +64,7 @@ export default function AppleCardsCarouselDemo() {
           duration: 0.3,
           ease: "power1.out",
         },
-        "-=0.2"
+        "-=0.2",
       )
       .to(
         desc,
@@ -74,7 +74,7 @@ export default function AppleCardsCarouselDemo() {
           duration: 0.3,
           ease: "power1.out",
         },
-        "-=0.2"
+        "-=0.2",
       )
       .to(
         carousel,
@@ -84,7 +84,7 @@ export default function AppleCardsCarouselDemo() {
           duration: 0.4,
           ease: "power1.out",
         },
-        "-=0.25"
+        "-=0.25",
       );
 
     ScrollTrigger.refresh();
@@ -95,7 +95,7 @@ export default function AppleCardsCarouselDemo() {
   ));
 
   return (
-    <div className="w-full pt-16 pb-8 md:pt-20 md:pb-10 border-t border-black/5 bg-transparent">
+    <div className="w-full pt-16 pb-8 md:pt-20 md:pb-10  bg-transparent">
       <div ref={containerRef} className="will-change-transform">
         <div className="w-[87vw] mx-auto mb-10">
           <div className="mb-6">
@@ -110,7 +110,10 @@ export default function AppleCardsCarouselDemo() {
               className="block font-bold text-[clamp(2.8rem,5vw,4.8rem)] leading-[0.95] tracking-[-0.04em] text-[#1A4DFF] mt-1 font-sans"
             >
               The{" "}
-              <LineShadowText className="text-[#1A4DFF] italic" shadowColor="#111111">
+              <LineShadowText
+                className="text-[#1A4DFF] italic"
+                shadowColor="#111111"
+              >
                 Portfolio
               </LineShadowText>
             </span>
@@ -161,7 +164,7 @@ const ProjectContent = ({
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {/* Video — 50% of expanded content */}
       {videoSrc && (
-        <div className="relative rounded-2xl overflow-hidden bg-black aspect-video">
+        <div className="relative rounded-2xl overflow-hidden bg-black  aspect-video">
           <video
             ref={videoRef}
             src={videoSrc}
@@ -232,7 +235,7 @@ const data = [
     category: "Portfolio",
     title: "Projects & Research Work",
     src: "/images/media__1782064807098.png",
-    videoSrc: "/part1.mp4",
+    videoSrc: "/part1.webm",
     targetUrl: "/projects-research",
     content: <div />,
   },
@@ -240,7 +243,7 @@ const data = [
     category: "Work",
     title: "Experience & Leadership",
     src: "/images/media__1782064946465.png",
-    videoSrc: "/part1.mp4",
+    videoSrc: "/part1.webm",
     targetUrl: "/experience",
     content: <div />,
   },
@@ -248,7 +251,7 @@ const data = [
     category: "Services",
     title: "Client Process & Methodology",
     src: "/images/coffee.jpg",
-    videoSrc: "/part1.mp4",
+    videoSrc: "/part2.webm",
     targetUrl: "/client-process",
     content: <div />,
   },
@@ -256,7 +259,7 @@ const data = [
     category: "Testimonials",
     title: "Client Reviews & Feedback",
     src: "/images/media__1782064654883.png",
-    videoSrc: "/part1.mp4",
+    videoSrc: "/part2.webm",
     targetUrl: "/client-review",
     content: <div />,
   },

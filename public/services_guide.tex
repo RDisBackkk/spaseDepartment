@@ -1,0 +1,257 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.2cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{float}
+\usepackage{fontenc}
+\usepackage{lmodern}
+
+% ── Colour palette ────────────────────────────────────────────────────────────
+\definecolor{brand}{HTML}{1A4DFF}
+\definecolor{dark}{HTML}{111111}
+\definecolor{mid}{HTML}{2E3129}
+\definecolor{light}{HTML}{F4F4F6}
+\definecolor{rule}{HTML}{E0E0E0}
+
+% ── Hyperref ─────────────────────────────────────────────────────────────────
+\hypersetup{
+  colorlinks=true,
+  linkcolor=brand,
+  urlcolor=brand,
+  pdftitle={Client Services Guide — Ujjwal Prakash},
+  pdfauthor={Ujjwal Prakash},
+}
+
+% ── Section styling ───────────────────────────────────────────────────────────
+\titleformat{\section}
+  {\Large\bfseries\color{dark}}
+  {}
+  {0em}
+  {}
+  [\vspace{-0.3em}\color{brand}\rule{\linewidth}{1.5pt}\vspace{0.4em}]
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{dark}}
+  {}
+  {0em}
+  {}
+
+\titlespacing*{\section}{0pt}{1.8em}{0.5em}
+\titlespacing*{\subsection}{0pt}{1em}{0.2em}
+
+% ── List styling ──────────────────────────────────────────────────────────────
+\setlist[itemize]{leftmargin=1.4em, itemsep=0.15em, topsep=0.3em}
+\setlist[enumerate]{leftmargin=1.4em, itemsep=0.15em, topsep=0.3em}
+
+% ── Row colour helper ────────────────────────────────────────────────────────
+\newcommand{\headerrow}{\rowcolor{brand!10}}
+
+\begin{document}
+
+% ── HEADER ───────────────────────────────────────────────────────────────────
+\begin{center}
+  {\fontsize{28}{32}\selectfont\bfseries\color{dark} Client Projects}\\[4pt]
+  {\fontsize{28}{32}\selectfont\bfseries\color{brand} Services Guide}\\[12pt]
+  {\small\color{mid} Ujjwal Prakash\ \ \textbullet\ \ Senior Software Engineer \& Team Lead\ \ \textbullet\ \ IIT Kanpur}\\[4pt]
+  {\small\color{mid}
+    \href{mailto:ujjwalprakash858@gmail.com}{ujjwalprakash858@gmail.com}\ \ \textbullet\ \ 
+    \href{https://www.linkedin.com/in/ujjwal-prakash-036873336/}{LinkedIn}\ \ \textbullet\ \ 
+    \href{https://github.com/ujjwalPrakash-spike}{GitHub}
+  }
+\end{center}
+
+\vspace{0.5em}
+\color{rule}\rule{\linewidth}{0.4pt}\color{dark}
+\vspace{0.8em}
+
+{\color{mid}\small
+How I build software for clients. A transparent breakdown of my technical stack, architecture principles, engineering process, and what working with me actually looks like — so you can make an informed decision before we start.
+}
+
+\vspace{1em}
+
+% ── 1. WHO I AM ──────────────────────────────────────────────────────────────
+\section{Who I Am}
+
+I am a Senior Software Engineer and Team Lead at IIT Kanpur, currently leading the development of the official IIT Kanpur Recruitment Automation System (RAS) — a production platform serving over \textbf{30,000+ students and 20,000+ active users}. I manage a team of 4 engineers across a 37,000+ line production codebase.
+
+Beyond engineering, I am a peer-reviewed researcher. My deep learning work on ISRO's earth observation data was \textbf{accepted for an oral presentation at IEEE IGARSS 2026} — one of the most competitive geospatial intelligence conferences in the world.
+
+I also teach full-stack engineering, with a \textbf{4.8/5.0 student rating}, which means I can communicate complex technical decisions in plain language — something clients consistently value.
+
+% ── 2. WHAT I BUILD ──────────────────────────────────────────────────────────
+\section{What I Build}
+
+\subsection{Backend Systems}
+
+I specialise in high-concurrency, production-grade backend systems. This includes REST and gRPC API design, authentication flows, database schema design, background job processing, and systems that need to handle thousands of concurrent users without degrading.
+
+\begin{itemize}
+  \item \textbf{Go (Golang)} — primary backend language for performance-critical services
+  \item \textbf{TypeScript / Node.js} — APIs, microservices, BFF (Backend for Frontend) layers
+  \item \textbf{PostgreSQL} — relational data modelling, query optimisation, indexing strategies
+  \item \textbf{Redis} — caching, session management, pub-sub, distributed locks
+  \item \textbf{Docker \& CI/CD} — containerised deployments, GitHub Actions pipelines
+\end{itemize}
+
+\subsection{Full-Stack Platforms}
+
+When the project requires a complete product, I can deliver end-to-end:
+
+\begin{itemize}
+  \item \textbf{Next.js} — SSR/SSG, API routes, auth integration, performance-optimised frontend
+  \item \textbf{React} — component-driven UI with TypeScript, state management, animation
+  \item \textbf{Database-to-UI pipelines} — from schema design through to rendered data tables
+\end{itemize}
+
+\subsection{AI \& Research Integration}
+
+With hands-on ML research experience (deep learning for satellite imagery, ISRO collaboration), I can integrate modern AI capabilities into products:
+
+\begin{itemize}
+  \item LLM API integration (OpenAI, Anthropic, Google)
+  \item Computer vision pipelines for custom datasets
+  \item Data processing and analytics backends
+\end{itemize}
+
+% ── 3. TECHNICAL STACK ───────────────────────────────────────────────────────
+\section{Technical Stack}
+
+\begin{tabularx}{\linewidth}{@{} l X @{}}
+  \toprule
+  \rowcolor{brand!8}
+  \textbf{Layer} & \textbf{Technologies} \\
+  \midrule
+  \textbf{Languages}    & Go, TypeScript, Python, SQL \\
+  \addlinespace[0.2em]
+  \textbf{Backend}      & Go (net/http, Chi, Gin), Node.js, REST, gRPC \\
+  \addlinespace[0.2em]
+  \textbf{Frontend}     & Next.js 14/15, React, Tailwind CSS, Framer Motion \\
+  \addlinespace[0.2em]
+  \textbf{Databases}    & PostgreSQL, Redis, SQLite \\
+  \addlinespace[0.2em]
+  \textbf{DevOps}       & Docker, GitHub Actions, Nginx, Linux servers \\
+  \addlinespace[0.2em]
+  \textbf{AI/ML}        & PyTorch, OpenCV, Scikit-learn, LLM APIs \\
+  \addlinespace[0.2em]
+  \textbf{Tools}        & Git, Postman, pgAdmin, Figma (handoff) \\
+  \bottomrule
+\end{tabularx}
+
+% ── 4. HOW I WORK ────────────────────────────────────────────────────────────
+\section{How I Work — Engineering Process}
+
+\subsection{Phase 1: Discovery (Days 1--3)}
+
+Before writing a single line of code, I need to fully understand what you are building and why. This phase involves a structured conversation covering your users, scale expectations, existing systems, and non-negotiables (compliance, latency, budget).
+
+Deliverable: a written scope document with agreed-upon architecture decisions, tech stack rationale, and a realistic timeline.
+
+\subsection{Phase 2: Architecture \& Schema Design (Days 3--7)}
+
+Good systems are designed before they are built. I produce:
+\begin{itemize}
+  \item Entity-relationship diagrams and database schema
+  \item API contract (endpoints, request/response shapes, error codes)
+  \item Sequence diagrams for critical user flows
+  \item Deployment architecture diagram (services, external dependencies, data flow)
+\end{itemize}
+
+This phase is deliberately slow. Decisions made here are far cheaper to change than decisions made in production.
+
+\subsection{Phase 3: Development (Variable)}
+
+I follow a trunk-based development workflow with atomic commits and descriptive pull requests. Every feature ships with:
+\begin{itemize}
+  \item Unit and integration tests
+  \item Clear inline documentation
+  \item Migration scripts for any database changes
+  \item A staging environment deployment before production
+\end{itemize}
+
+I send progress updates at every meaningful milestone — not just at the end.
+
+\subsection{Phase 4: Testing \& Handoff}
+
+Before marking work complete, the system passes:
+\begin{itemize}
+  \item Load testing at $2\times$ expected peak traffic
+  \item Security review (auth, input validation, SQL injection checks)
+  \item Documentation: README, API reference, deployment runbook
+\end{itemize}
+
+Handoff includes a walkthrough call and 14 days of post-launch support for critical bugs at no additional charge.
+
+% ── 5. WHAT TO EXPECT ────────────────────────────────────────────────────────
+\section{What You Can Expect From Me}
+
+\begin{itemize}
+  \item \textbf{Honest timelines.} I do not promise what I cannot deliver. If a scope is unrealistic, I say so before we begin.
+  \item \textbf{Clear communication.} Written updates, not just verbal ones. Decision logs so you always know why something was built the way it was.
+  \item \textbf{Production-first thinking.} Code that will survive real users, not just a demo environment. I have maintained a 99.9\% uptime system in production — I build with that standard.
+  \item \textbf{No lock-in.} You own everything. Clean, documented code that any competent engineer can continue after me.
+\end{itemize}
+
+% ── 6. ENGAGEMENT TYPES ──────────────────────────────────────────────────────
+\section{Engagement Types}
+
+\begin{tabularx}{\linewidth}{@{} l l X @{}}
+  \toprule
+  \rowcolor{brand!8}
+  \textbf{Type} & \textbf{Duration} & \textbf{Best For} \\
+  \midrule
+  \textbf{Project-based}   & 2--16 weeks  & Defined scope with clear deliverables \\
+  \addlinespace[0.2em]
+  \textbf{Advisory retainer} & Monthly      & Ongoing architecture review, code review, technical direction \\
+  \addlinespace[0.2em]
+  \textbf{Rescue mission}  & 1--4 weeks   & Existing codebase in trouble — performance, bugs, or security \\
+  \addlinespace[0.2em]
+  \textbf{Build to hand off} & 4--12 weeks & Full system built and documented for an in-house team to own \\
+  \bottomrule
+\end{tabularx}
+
+% ── 7. NOT A FIT ─────────────────────────────────────────────────────────────
+\section{When We Are Probably Not a Good Fit}
+
+I want to be honest about this, because misaligned expectations waste everyone's time.
+
+\begin{itemize}
+  \item You need a resource who is available 24/7 and interruptible on demand
+  \item The project has no defined problem — only a vague idea with no user validation
+  \item You expect a fixed-price quote before any discovery conversation
+  \item The timeline is ``as fast as possible'' with no flexibility
+\end{itemize}
+
+% ── 8. HOW TO START ──────────────────────────────────────────────────────────
+\section{How to Start}
+
+The first step is a 30-minute conversation — no pitch, no pressure. I want to understand your problem and tell you honestly whether I can help.
+
+\begin{center}
+  \vspace{0.5em}
+  \large\bfseries
+  \href{mailto:ujjwalprakash858@gmail.com}{ujjwalprakash858@gmail.com}
+  \vspace{0.3em}
+\end{center}
+
+\vspace{0.5em}
+\color{rule}\rule{\linewidth}{0.4pt}\color{dark}
+\vspace{0.5em}
+
+{\small\color{mid}
+\textbf{Ujjwal Prakash} — Senior Software Engineer \& Team Lead, IIT Kanpur.
+Promoted for leading a 30K+ user production system. IEEE IGARSS 2026 accepted researcher. 4.8/5.0 teaching rating.\\[4pt]
+\href{https://www.linkedin.com/in/ujjwal-prakash-036873336/}{linkedin.com/in/ujjwal-prakash-036873336}\ \ \textbullet\ \ 
+\href{https://github.com/ujjwalPrakash-spike}{github.com/ujjwalPrakash-spike}
+}
+
+\end{document}
