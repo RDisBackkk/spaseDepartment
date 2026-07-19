@@ -26,7 +26,7 @@ export const siteConfig = {
       footerPrefix: "IITK.",
       footerText: "30K+ Users System Lead",
 
-      cta: "VIEW PROJECTS",
+      cta: "BOOK A MEET",
 
       descriptionInfo:
         "Leading 4 developers on a 30K+ user platform. Rated 4.8/5.0 for teaching full-stack engineering.",

@@ -140,7 +140,7 @@ export default function ReportSection() {
               className="block font-bold text-[clamp(2.8rem,5vw,4.8rem)] leading-[0.95] tracking-[-0.04em] text-[#1A4DFF] mt-1"
             >
               Services{" "}
-              <LineShadowText className="text-[#1A4DFF]" shadowColor="#111111">
+              <LineShadowText className="text-[#1A4DFF] italic" shadowColor="#111111">
                 Guide
               </LineShadowText>
             </span>
