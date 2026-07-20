@@ -143,11 +143,31 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         <div className="absolute right-0 top-0 bottom-0 w-[3vw] bg-gradient-to-l from-[#dee1e4] via-[#dee1e4]/30 to-transparent z-30 pointer-events-none" />
 
         <div
-          className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-10 [scrollbar-width:none]"
+          className="flex w-full overflow-x-scroll overscroll-x-auto py-10 [scrollbar-width:none] [scroll-snap-type:x_mandatory]"
           ref={carouselRef}
           onScroll={() => {
             checkScrollability();
             checkActiveCard();
+          }}
+          onTouchEnd={() => {
+            // JS fallback snap: after finger lifts, programmatically
+            // scroll to the center of the nearest card (catches iOS Safari edge cases)
+            const container = carouselRef.current;
+            if (!container) return;
+            const cards = container.querySelectorAll(".carousel-card-item");
+            if (cards.length === 0) return;
+            const paddingLeft = window.innerWidth * 0.065;
+            const focusPoint = container.scrollLeft + paddingLeft + (cards[0] as HTMLElement).clientWidth / 2;
+            let closest = 0;
+            let minDist = Infinity;
+            cards.forEach((el, i) => {
+              const htmlEl = el as HTMLElement;
+              const center = htmlEl.offsetLeft + htmlEl.clientWidth / 2;
+              const dist = Math.abs(center - focusPoint);
+              if (dist < minDist) { minDist = dist; closest = i; }
+            });
+            const target = cards[closest] as HTMLElement;
+            container.scrollTo({ left: target.offsetLeft - paddingLeft, behavior: "smooth" });
           }}
         >
           <div
@@ -172,7 +192,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                   },
                 }}
                 key={"card" + index}
-                className="rounded-3xl carousel-card-item"
+                className="rounded-3xl carousel-card-item [scroll-snap-align:center] flex-shrink-0"
               >
                 {item}
               </motion.div>
