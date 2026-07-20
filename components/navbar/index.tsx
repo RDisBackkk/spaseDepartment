@@ -17,13 +17,13 @@ export default function Navbar() {
     const delta = latest - lastScrollY.current;
     lastScrollY.current = latest;
 
-    if (latest <= 0) {
+    if (latest <= 80) {
       navProgress.set(1);
       return;
     }
 
-    // 250px to fully hide or show the navbar
-    const SCROLL_DISTANCE = 250;
+    // 500px to fully hide or show the navbar
+    const SCROLL_DISTANCE = 500;
     
     let newProgress = navProgress.get() - (delta / SCROLL_DISTANCE);
     newProgress = Math.max(0, Math.min(1, newProgress));
