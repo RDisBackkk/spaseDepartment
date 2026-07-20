@@ -76,22 +76,22 @@ export const TracingBeam = ({
     >
       <div className="absolute top-3 -left-4 md:-left-20">
         <svg
-          viewBox={`0 0 20 ${svgHeight}`}
-          width="20"
+          viewBox={`0 0 100 ${svgHeight}`}
+          width="100"
           height={svgHeight}
-          className="ml-4 block"
+          className="ml-[-24px] block"
           aria-hidden="true"
         >
           {/* Base path */}
           <path
-            d={`M 10 0 V ${svgHeight}`}
+            d={`M 50 0 V ${svgHeight}`}
             fill="none"
             stroke="#9091A0"
             strokeOpacity="0.16"
           />
           {/* Active tracing path */}
           <motion.path
-            d={`M 10 0 V ${svgHeight}`}
+            d={`M 50 0 V ${svgHeight}`}
             fill="none"
             stroke="url(#beam-gradient)"
             strokeWidth="2"
@@ -127,15 +127,15 @@ const CheckpointCircle = ({ y, yProgress }: { y: number; yProgress: any }) => {
   // Map progress to colors and size when scroll passes the checkpoint height
   const fill = useTransform(yProgress, [y - 35, y], ["#dee1e4", "#1A4DFF"]);
   const stroke = useTransform(yProgress, [y - 35, y], ["rgba(0, 0, 0, 0.15)", "#1A4DFF"]);
-  const r = useTransform(yProgress, [y - 35, y], [4, 6]);
+  const r = useTransform(yProgress, [y - 35, y], [4, 7]);
   const glowOpacity = useTransform(yProgress, [y - 35, y], [0, 0.25]);
-  const glowRadius = useTransform(yProgress, [y - 35, y], [4, 14]);
+  const glowRadius = useTransform(yProgress, [y - 35, y], [4, 16]);
 
   return (
     <g>
       {/* Outer glow ring when active */}
       <motion.circle
-        cx="10"
+        cx="50"
         cy={y}
         r={glowRadius}
         fill="#1A4DFF"
@@ -143,12 +143,12 @@ const CheckpointCircle = ({ y, yProgress }: { y: number; yProgress: any }) => {
       />
       {/* Core checkpoint circle */}
       <motion.circle
-        cx="10"
+        cx="50"
         cy={y}
         r={r}
         fill={fill}
         stroke={stroke}
-        strokeWidth="2"
+        strokeWidth="2.5"
       />
     </g>
   );

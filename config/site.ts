@@ -13,7 +13,7 @@ export const siteConfig = {
     ],
     cta: {
       label: "Resume",
-      href: "https://ujjwalprakash.netlify.app/",
+      href: "/resume.pdf",
     },
   },
 
