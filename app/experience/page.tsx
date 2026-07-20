@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, Briefcase, Calendar, Users, Award } from "lucide-react";
 import Link from "next/link";
+import { TracingBeam } from "@/components/ui/tracing-beam";
 
 const experienceData = [
   {
@@ -118,21 +119,17 @@ export default function ExperiencePage() {
           </p>
         </div>
 
-        {/* Timeline */}
-        <div className="relative border-l border-black/10 pl-6 md:pl-10 ml-2 space-y-16">
-          {experienceData.map((exp, index) => (
-            <motion.div
-              key={exp.role + index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative group"
-            >
-              {/* Timeline dot */}
-              <div
-                className="absolute -left-[31px] md:-left-[47px] top-1 w-[9px] h-[9px] rounded-full border border-black/20 bg-[#dee1e4] group-hover:scale-125 transition-transform"
-                style={{ borderColor: exp.color }}
-              />
+        {/* Interactive Tracing Beam Timeline */}
+        <TracingBeam className="pl-4 md:pl-20">
+          <div className="space-y-16">
+            {experienceData.map((exp, index) => (
+              <motion.div
+                key={exp.role + index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="timeline-item relative group"
+              >
 
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                 {/* Left Side: Role, Company, Metrics */}
@@ -187,7 +184,8 @@ export default function ExperiencePage() {
               </div>
             </motion.div>
           ))}
-        </div>
+          </div>
+        </TracingBeam>
       </div>
     </main>
   );
