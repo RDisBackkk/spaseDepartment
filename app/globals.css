@@ -232,6 +232,11 @@ html.lenis body {
   overscroll-behavior: contain;
 }
 
+.lenis.lenis-smooth [data-lenis-prevent-horizontal] {
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
+}
+
 .lenis.lenis-stopped {
   overflow: hidden;
 }

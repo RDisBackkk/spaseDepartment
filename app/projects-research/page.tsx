@@ -2,15 +2,32 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowUpRight, Code, Database, Globe, Brain } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowUpRight,
+  Code,
+  Database,
+  Globe,
+  Brain,
+} from "lucide-react";
 import Link from "next/link";
 
 const projectsData = [
   {
     title: "TRINETRA: Vision-Language for ISRO",
     subtitle: "Research — IEEE IGARSS 2026 Oral Presentation",
-    description: "Developed a novel vision-language ensemble framework in collaboration with the Indian Space Research Organisation (ISRO). Accepted for a prestigious Oral Presentation at the flagship IEEE International Geoscience and Remote Sensing Symposium in Washington D.C.",
-    tech: ["Python", "FastAPI", "Flask", "Next.js", "Supabase", "Qwen-VL", "LLaMA 3.1", "Modal"],
+    description:
+      "Developed a novel vision-language ensemble framework in collaboration with the Indian Space Research Organisation (ISRO). Accepted for a prestigious Oral Presentation at the flagship IEEE International Geoscience and Remote Sensing Symposium in Washington D.C.",
+    tech: [
+      "Python",
+      "FastAPI",
+      "Flask",
+      "Next.js",
+      "Supabase",
+      "Qwen-VL",
+      "LLaMA 3.1",
+      "Modal",
+    ],
     metrics: [
       { label: "Medal", value: "Silver — Inter IIT" },
       { label: "Scope", value: "Oral Presentation" },
@@ -23,7 +40,8 @@ const projectsData = [
   {
     title: "Placement Interview Management System (PIMS)",
     subtitle: "Production Operations Platform",
-    description: "Architected and deployed a real-time interview operations platform to replace manual, Excel-based workflows. Features a Global Availability Engine with real-time conflict detection and seamless RAS portal sync, eliminating data silos.",
+    description:
+      "Architected and deployed a real-time interview operations platform to replace manual, Excel-based workflows. Features a Global Availability Engine with real-time conflict detection and seamless RAS portal sync, eliminating data silos.",
     tech: ["Go", "Gin", "Next.js", "PostgreSQL", "Docker", "Nginx", "Redis"],
     metrics: [
       { label: "Daily Active Users", value: "2,000+" },
@@ -37,8 +55,17 @@ const projectsData = [
   {
     title: "RAS Portal: 30K+ Users Platform",
     subtitle: "Engineering Leadership",
-    description: "As Senior Software Engineer & Team Lead, managing the official IIT Kanpur placement portal. Handles a 37,000+ line production codebase serving 20,000+ students and top-tier recruiters including Google, Microsoft, Tower Research Capital, and Optiver.",
-    tech: ["Go", "Gin", "Next.js", "PostgreSQL", "Docker", "TypeScript", "Nginx"],
+    description:
+      "As Senior Software Engineer & Team Lead, managing the official IIT Kanpur placement portal. Handles a 37,000+ line production codebase serving 20,000+ students and top-tier recruiters including Google, Microsoft, Tower Research Capital, and Optiver.",
+    tech: [
+      "Go",
+      "Gin",
+      "Next.js",
+      "PostgreSQL",
+      "Docker",
+      "TypeScript",
+      "Nginx",
+    ],
     metrics: [
       { label: "LOC Maintained", value: "37K+" },
       { label: "Students", value: "20K+" },
@@ -51,8 +78,17 @@ const projectsData = [
   {
     title: "Research Lab Portal",
     subtitle: "Centralized Campus Application Portal",
-    description: "Architecting a centralized portal/ecosystem to automate research lab applications across IIT Kanpur. Designed relational data models with index optimizations to reduce local query latency to sub-100ms.",
-    tech: ["NestJS", "Prisma ORM", "PostgreSQL", "AWS", "React", "Tailwind CSS", "TypeScript"],
+    description:
+      "Architecting a centralized portal/ecosystem to automate research lab applications across IIT Kanpur. Designed relational data models with index optimizations to reduce local query latency to sub-100ms.",
+    tech: [
+      "NestJS",
+      "Prisma ORM",
+      "PostgreSQL",
+      "AWS",
+      "React",
+      "Tailwind CSS",
+      "TypeScript",
+    ],
     metrics: [
       { label: "Community Scale", value: "30,000+ Users" },
       { label: "Query Speedup", value: "40% faster" },
@@ -65,8 +101,16 @@ const projectsData = [
   {
     title: "Cipher — AI-Powered Productivity OS",
     subtitle: "Personal Productivity & Auto-Deploy Pipeline",
-    description: "Built a productivity platform (task tracking, focus modes) integrated with an LLM pipeline that accepts natural-language feature descriptions, generates production-ready code, and auto-deploys via a CI/CD pipeline on merge.",
-    tech: ["Next.js", "React", "TypeScript", "PostgreSQL", "Docker", "GitHub Actions"],
+    description:
+      "Built a productivity platform (task tracking, focus modes) integrated with an LLM pipeline that accepts natural-language feature descriptions, generates production-ready code, and auto-deploys via a CI/CD pipeline on merge.",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Docker",
+      "GitHub Actions",
+    ],
     metrics: [
       { label: "Integration", value: "LLM Pipeline" },
       { label: "Deploy Model", value: "Auto CI/CD" },
@@ -78,8 +122,16 @@ const projectsData = [
   {
     title: "2D Battle Arena — Multiplayer Game",
     subtitle: "Real-Time Authoritative Multi-player Game",
-    description: "Implemented a fixed-timestep authoritative game loop in Go that syncs player actions over WebSockets. Leveraged Canvas-based renderer with client-side prediction and server reconciliation to mask network latency.",
-    tech: ["Go", "WebSockets", "TypeScript", "Canvas API", "Redis", "PostgreSQL"],
+    description:
+      "Implemented a fixed-timestep authoritative game loop in Go that syncs player actions over WebSockets. Leveraged Canvas-based renderer with client-side prediction and server reconciliation to mask network latency.",
+    tech: [
+      "Go",
+      "WebSockets",
+      "TypeScript",
+      "Canvas API",
+      "Redis",
+      "PostgreSQL",
+    ],
     metrics: [
       { label: "FPS", value: "Smooth 60fps" },
       { label: "Round-trip", value: "sub-50ms" },
@@ -108,7 +160,9 @@ export default function ProjectsResearchPage() {
             Projects & Research Work
           </h1>
           <p className="mt-6 text-[15px] md:text-[17px] leading-[1.7] text-[#2E3129] opacity-80">
-            Selected engineering achievements and peer-reviewed research, highlighting full-stack scale, high-availability architecture, and vision-language integrations.
+            Selected engineering achievements and peer-reviewed research,
+            highlighting full-stack scale, high-availability architecture, and
+            vision-language integrations.
           </p>
         </div>
 
@@ -172,7 +226,6 @@ export default function ProjectsResearchPage() {
                   ))}
                 </div>
 
-                {/* CTA Link */}
                 <a
                   href={project.ctaHref}
                   target="_blank"

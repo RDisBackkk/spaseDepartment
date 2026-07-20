@@ -149,7 +149,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             checkScrollability();
             checkActiveCard();
           }}
-          data-lenis-prevent
+          data-lenis-prevent-horizontal
         >
           <div
             className={cn(
